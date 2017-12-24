@@ -11,29 +11,9 @@ const r = new Snoowrap({
     username: process.env.REDDIT_USER,
     password: process.env.REDDIT_PASS
 });
+// That's the entire setup process, now you can just make requests.
 
-r.getSubscriptions('AskReddit').getSubscriptions.
+// Submitting a link to a subreddit
 
-for submission in reddit.subreddit('all').hot(limit=25):
-    print(submission.title)
-
-/*
-const client = new Snoostorm(r);
-
-// Configure options for stream: subreddit & results per query
-const streamOpts = {
-    subreddit: 'all',
-    results: 25
-};
-
-// Create a Snoostorm CommentStream with the specified options
-const comments = client.CommentStream(streamOpts); // eslint-disable-line
-
-// On comment, perform whatever logic you want to do
-comments.on('comment', (comment) => {
-    if (comment.body === ':(') {
-        //comment.reply(':)');
-    }
-    */
-   
-
+// Printing the content of a wiki page
+r.getSubreddit('AskReddit').getWikiPage('bestof').content_md.then(console.log);
