@@ -14,7 +14,7 @@ const r = new Snoowrap({
 
 
 
-r.getSubreddit('snoowrap').getWikibannedUsers().then(console.log)
+r.getSubreddit('AskReddit').getWikiPage('bestof').content_md.then(console.log);
 /*
 const client = new Snoostorm(r);
 
