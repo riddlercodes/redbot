@@ -12,9 +12,11 @@ const r = new Snoowrap({
     password: process.env.REDDIT_PASS
 });
 
+r.getSubscriptions('AskReddit').getSubscriptions.
 
+for submission in reddit.subreddit('all').hot(limit=25):
+    print(submission.title)
 
-r.getSubreddit('AskReddit').getWikiPage('bestof').content_md.then(console.log);
 /*
 const client = new Snoostorm(r);
 
